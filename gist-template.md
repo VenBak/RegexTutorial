@@ -27,6 +27,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 Anchors serve the purpose of finding patterns behind strings. The most widely used anchors are the caret `^` and the dollar sign `$`.
 
 The caret `^` matches with the beginning of a line.
+
 The dollar sign `$` matches with the end of a line.
 
 Example:
@@ -55,13 +56,56 @@ Example:
 
 ### OR Operator
 
+The OR operator in regular expressions is denoted by the `|` character and is used to match either of two patterns which are seperated by that character.
+
+`hello|world` matches any string that contains either "world" or "hello
+
+Example:
+
+`apple|orange` matches either "apple" or "orange".
+
 ### Character Classes
+
+Character classes server the purpose of matching a set of characters. Some commonly used character classes are `[a-z]`, `[A-Z]`, and `[0-9]`.
+
+`[a-z]` matches any lowercase letter from "a" to "z".
+
+`[A-Z]` matches any uppercase letter from "A" to "Z".
+
+`[0-9]` matches any digit from 0 to 9.
+
+Example:
+
+`[aeiou]` matches any vowel.
 
 ### Flags
 
+Flags serve the purpose of modifying the behavior of a specfic regex pattern. The most widely used flas are `i` which means case-insensitive, `g` which means global, and `m` which means multiline.
+
+`i` makes the pattern case-insensitive.
+
+`g` matches all occurrences of the pattern, not just the first one.
+
+`m` matches the pattern across multiple lines.
+
+Example:
+
+`/hello/i` matches "hello", "Hello", "hElLo", etc.
+
+`/world/g` matches all occurrences of "world" in the string.
+
 ### Grouping and Capturing
 
+Grouping and capturing serves the purpose of grouping patterns together and capture the matched text for it to be used later. Groups are written with parentheses `()`.
+
+Example:
+
+`(hello)+` matches one or more occurrences of "hello".
+
+`(hello)(world)` matches "hello" followed by "world" and captures both as separate groups.
+
 ### Bracket Expressions
+
 
 ### Greedy and Lazy Match
 
